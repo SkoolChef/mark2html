@@ -3,28 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI는 이제 성능 경쟁을 지나 운영의 시대에 들어섰다</title>
-  <meta name="description" content="AI 보안, 1인 고매출 기업, Multi-LLM 라우팅, 피지컬 AI가 동시에 부상한 2026년 8월 첫째 주 기술 흐름을 읽는다.">
-  <meta name="author" content="Our practice">
+  <title>AI는 이제 ‘성능 경쟁’에서 ‘운영 능력’의 시대로 들어섰다</title>
+  <meta name="description" content="AI 보안, 1인 고매출 기업, Multi-LLM 라우팅, 피지컬 AI가 동시에 부상한 2026년 8월 첫째 주 기술 뉴스 분석 리포트.">
+  <meta property="og:title" content="AI는 이제 ‘성능 경쟁’에서 ‘운영 능력’의 시대로 들어섰다">
+  <meta property="og:description" content="보안 기본기, 비용 최적화, 솔로 오퍼레이터, 피지컬 AI가 만드는 다음 기술 국면.">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AI는 이제 성능 경쟁을 지나 운영의 시대에 들어섰다">
-  <meta property="og:description" content="보안, 비용, 1인 기업, 피지컬 AI가 말해주는 다음 기술 생태계의 방향.">
   <meta property="og:image" content="assets/this-week-s-awesome-tech-stories-from-around-the-web-through-august-1-infograph-1785752458743.png">
-  <meta property="article:published_time" content="2026-08-01">
-  <meta property="article:modified_time" content="2026-08-03">
   <style>
     :root {
-      --bg: #f7f4ef;
-      --paper: #fffaf2;
-      --ink: #171717;
-      --muted: #66645f;
-      --line: #ded6ca;
-      --accent: #0f766e;
+      --bg: #f7f4ee;
+      --paper: #fffdfa;
+      --ink: #1f2933;
+      --muted: #65717f;
+      --line: #e5ded1;
+      --accent: #0e7490;
       --accent-2: #b45309;
-      --accent-3: #334155;
-      --soft: #ece5d9;
-      --card: #ffffff;
-      --shadow: 0 18px 50px rgba(35, 30, 22, 0.12);
+      --accent-3: #6d5dfc;
+      --soft-blue: #e7f5f8;
+      --soft-gold: #fff3d8;
+      --soft-lavender: #eeecff;
+      --soft-green: #e9f7ee;
+      --shadow: 0 20px 60px rgba(41, 32, 17, .10);
       --radius: 8px;
       --max: 1120px;
     }
@@ -38,19 +37,19 @@
     body {
       margin: 0;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.7), rgba(247,244,239,0.9)),
-        radial-gradient(circle at top left, rgba(15,118,110,0.10), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,.7), rgba(247,244,238,.2) 34rem),
         var(--bg);
       color: var(--ink);
-      font-family: ui-serif, Georgia, "Times New Roman", "Apple SD Gothic Neo", "Noto Serif KR", serif;
-      line-height: 1.75;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.72;
       word-break: keep-all;
+      overflow-wrap: break-word;
     }
 
     a {
       color: var(--accent);
       text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
+      text-underline-offset: 3px;
     }
 
     img {
@@ -64,327 +63,334 @@
     }
 
     .hero {
-      padding: 48px 0 34px;
+      padding: 56px 0 34px;
       border-bottom: 1px solid var(--line);
     }
 
     .kicker {
       display: inline-flex;
-      gap: 8px;
       align-items: center;
-      margin-bottom: 20px;
-      color: var(--accent);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 6px 10px;
+      border: 1px solid rgba(14, 116, 144, .22);
+      border-radius: 999px;
+      background: rgba(231, 245, 248, .72);
+      color: #155e75;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    .kicker::before {
-      content: "";
-      width: 34px;
-      height: 1px;
-      background: var(--accent);
     }
 
     h1 {
       max-width: 920px;
       margin: 0;
-      font-size: clamp(42px, 7vw, 82px);
-      line-height: 1.05;
+      font-family: ui-serif, Georgia, "Times New Roman", "Nanum Myeongjo", serif;
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 1.03;
       letter-spacing: 0;
-      font-weight: 800;
+      color: #17212b;
     }
 
-    .dek {
-      max-width: 790px;
-      margin: 24px 0 0;
-      color: #3f3d38;
-      font-size: clamp(19px, 2.4vw, 25px);
-      line-height: 1.55;
+    .subtitle {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: #4b5967;
+      font-size: clamp(18px, 2.2vw, 23px);
+      line-height: 1.62;
     }
 
-    .meta-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 28px;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .pill {
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.56);
-      padding: 6px 10px;
-      border-radius: 999px;
-    }
-
-    .hero-grid {
+    .meta-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-      gap: 34px;
-      align-items: end;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
       margin-top: 34px;
-    }
-
-    .hero-image {
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: var(--paper);
+      background: var(--line);
+    }
+
+    .meta-grid div {
+      padding: 16px;
+      background: rgba(255, 253, 250, .86);
+    }
+
+    .meta-grid strong {
+      display: block;
+      color: #7c4a03;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .meta-grid span {
+      display: block;
+      margin-top: 3px;
+      color: #26323f;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero-image {
+      margin-top: 28px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
       box-shadow: var(--shadow);
     }
 
     .hero-image figcaption {
-      padding: 11px 14px;
+      padding: 12px 16px;
       color: var(--muted);
-      border-top: 1px solid var(--line);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
       font-size: 13px;
-      line-height: 1.45;
+      border-top: 1px solid var(--line);
     }
 
-    .abstract {
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 250, 242, 0.78);
-    }
-
-    .abstract h2 {
-      margin: 0 0 10px;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      font-size: 15px;
-      letter-spacing: 0;
-      text-transform: uppercase;
-      color: var(--accent-2);
-    }
-
-    .abstract p {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    .tools {
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      backdrop-filter: blur(16px);
-      background: rgba(247, 244, 239, 0.86);
-      border-bottom: 1px solid rgba(222, 214, 202, 0.8);
-    }
-
-    .tools-inner {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-      display: flex;
-      gap: 10px;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+    .layout {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 44px;
+      padding: 42px 0 72px;
     }
 
     .toc {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .toc a,
-    button {
-      min-height: 36px;
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      padding: 18px;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      color: var(--accent-3);
-      padding: 8px 12px;
-      font: 700 13px/1 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      white-space: nowrap;
-      cursor: pointer;
+      border-radius: var(--radius);
+      background: rgba(255, 253, 250, .78);
+      backdrop-filter: blur(10px);
     }
 
-    button:hover,
+    .toc h2 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: #7c4a03;
+      text-transform: uppercase;
+    }
+
+    .toc a {
+      display: block;
+      padding: 8px 0;
+      color: #3c4856;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border-top: 1px solid rgba(229, 222, 209, .8);
+    }
+
     .toc a:hover {
-      border-color: var(--accent);
       color: var(--accent);
     }
 
-    main {
+    .toolbox {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 42px;
-      padding: 48px 0 70px;
+      gap: 8px;
+      margin-top: 14px;
     }
 
-    article {
+    button {
+      width: 100%;
+      border: 1px solid rgba(14, 116, 144, .24);
+      border-radius: 6px;
+      background: #ffffff;
+      color: #155e75;
+      padding: 9px 10px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--soft-blue);
+    }
+
+    main {
       min-width: 0;
     }
 
-    .side {
-      align-self: start;
-      position: sticky;
-      top: 74px;
-      border-left: 1px solid var(--line);
-      padding-left: 20px;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .side h3 {
-      margin: 0 0 12px;
-      color: var(--ink);
-      font-size: 14px;
-    }
-
-    .side ol {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .side li {
-      margin: 8px 0;
+    article {
+      padding: 0;
     }
 
     section {
-      padding: 38px 0;
-      border-bottom: 1px solid var(--line);
+      margin: 0 0 48px;
+      scroll-margin-top: 24px;
+    }
+
+    .section-label {
+      margin: 0 0 8px;
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
     h2 {
       margin: 0 0 18px;
-      font-size: clamp(28px, 3.5vw, 43px);
+      font-family: ui-serif, Georgia, "Times New Roman", "Nanum Myeongjo", serif;
+      font-size: clamp(29px, 4vw, 44px);
       line-height: 1.18;
       letter-spacing: 0;
     }
 
     h3 {
-      margin: 28px 0 12px;
-      font-size: 22px;
+      margin: 28px 0 10px;
+      font-size: 21px;
       line-height: 1.35;
-      letter-spacing: 0;
+      color: #243241;
     }
 
     p {
-      margin: 0 0 18px;
-      font-size: 18px;
+      margin: 0 0 16px;
+      font-size: 17px;
     }
 
-    .lead {
-      font-size: 21px;
-      line-height: 1.72;
-      color: #2d2b27;
-    }
-
-    .key-findings {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .finding,
-    .card {
+    .lead-card,
+    .finding-card,
+    .source-note,
+    .ending {
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: var(--card);
-      padding: 20px;
-      box-shadow: 0 8px 24px rgba(35, 30, 22, 0.06);
+      background: var(--paper);
+      box-shadow: 0 8px 30px rgba(41, 32, 17, .06);
     }
 
-    .finding strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--accent);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      font-size: 14px;
+    .lead-card {
+      padding: 28px;
+      background: linear-gradient(135deg, #fffdfa, var(--soft-blue));
     }
 
-    .finding p,
-    .card p {
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.65;
+    .abstract {
+      font-size: 19px;
+      color: #283746;
     }
 
-    .pullquote {
-      margin: 34px 0;
-      padding: 26px 0 26px 28px;
-      border-left: 4px solid var(--accent);
-      color: #22201c;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.42;
-      font-weight: 800;
-    }
-
-    .evidence-grid,
-    .keyword-grid,
-    .application-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+    .share-frame {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-top: 20px;
     }
 
-    .badge {
+    .pill {
       display: inline-flex;
       align-items: center;
-      margin-bottom: 12px;
-      color: var(--accent-2);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(14, 116, 144, .18);
+      color: #155e75;
       font-size: 13px;
       font-weight: 800;
     }
 
-    ul,
-    ol {
-      padding-left: 23px;
-      margin: 14px 0 0;
+    .findings {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    li {
-      margin: 8px 0;
+    .finding-card {
+      padding: 20px;
+    }
+
+    .finding-card b {
+      display: block;
+      margin-bottom: 8px;
+      color: #17212b;
       font-size: 17px;
     }
 
-    .matrix {
-      width: 100%;
-      border-collapse: collapse;
-      overflow: hidden;
-      margin: 22px 0;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: white;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+    .finding-card p {
+      margin: 0;
+      color: #52606d;
       font-size: 15px;
     }
 
-    .matrix th,
-    .matrix td {
-      padding: 14px;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
+    .quote {
+      margin: 34px 0;
+      padding: 26px 30px;
+      border-left: 5px solid var(--accent);
+      background: #ffffff;
+      color: #17212b;
+      font-family: ui-serif, Georgia, "Times New Roman", "Nanum Myeongjo", serif;
+      font-size: clamp(23px, 3vw, 33px);
+      line-height: 1.38;
+      box-shadow: 0 14px 36px rgba(41, 32, 17, .07);
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .evidence {
+      min-height: 100%;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .evidence:nth-child(1) { background: var(--soft-blue); }
+    .evidence:nth-child(2) { background: var(--soft-gold); }
+    .evidence:nth-child(3) { background: var(--soft-lavender); }
+
+    .evidence strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #17212b;
+      font-size: 16px;
+    }
+
+    .evidence span {
+      color: #52606d;
+      font-size: 15px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th, td {
+      padding: 14px 16px;
       text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
     }
 
-    .matrix th {
-      background: #ebe3d6;
-      color: #292621;
-      font-weight: 800;
+    th {
+      background: #f1ece2;
+      color: #344050;
+      font-size: 13px;
+      text-transform: uppercase;
     }
 
-    .matrix tr:last-child td {
+    tr:last-child td {
       border-bottom: 0;
     }
 
     .diagram {
-      margin: 26px 0;
+      margin-top: 20px;
       padding: 22px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -393,131 +399,155 @@
 
     .flow {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       align-items: stretch;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
     }
 
     .flow div {
       position: relative;
-      min-height: 112px;
-      padding: 16px;
+      padding: 16px 14px;
+      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid #dbe3ea;
+      text-align: center;
+      font-weight: 850;
+      color: #243241;
+      min-height: 84px;
+      display: grid;
+      place-items: center;
+    }
+
+    .flow div:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent);
+      font-weight: 900;
+      z-index: 1;
+    }
+
+    .application-list {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .application-list li {
+      padding: 16px 18px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: #f8f4ec;
+      background: #fff;
     }
 
-    .flow strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--accent);
-    }
-
-    .flow span {
-      display: block;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .section-note {
-      color: var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      font-size: 14px;
+    .application-list strong {
+      color: var(--accent-2);
     }
 
     details {
+      margin-top: 16px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.72);
-      margin-top: 16px;
-      padding: 16px 18px;
+      background: #fff;
     }
 
     summary {
+      padding: 15px 18px;
       cursor: pointer;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      font-weight: 800;
-      color: var(--accent-3);
+      font-weight: 900;
+      color: #2f3b49;
     }
 
-    .content-ideas {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
+    details .details-body {
+      padding: 0 18px 18px;
+      color: #4b5967;
+    }
+
+    .source-note {
+      padding: 22px;
+      background: #fff;
+    }
+
+    .source-note ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
     }
 
     .ending {
-      padding: 36px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #18211f;
-      color: #f8f1e6;
+      padding: 28px;
+      background: linear-gradient(135deg, #17212b, #243241);
+      color: #f8fafc;
     }
 
-    .ending h2,
+    .ending h2 {
+      color: #ffffff;
+    }
+
     .ending p {
-      color: #f8f1e6;
+      color: #d7dee6;
     }
 
-    .ending a {
-      color: #8ee7dd;
+    .copy-status {
+      min-height: 20px;
+      margin-top: 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
     }
 
-    .toast {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      display: none;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: #18211f;
-      color: #fff;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-      font-size: 13px;
-      z-index: 20;
-    }
-
-    @media (max-width: 920px) {
-      .hero-grid,
-      main {
+    @media (max-width: 900px) {
+      .layout {
         grid-template-columns: 1fr;
+        gap: 28px;
       }
 
-      .side {
-        display: none;
+      .toc {
+        position: static;
       }
 
-      .key-findings,
+      .meta-grid,
+      .findings,
       .evidence-grid,
-      .keyword-grid,
-      .application-grid,
-      .content-ideas,
       .flow {
         grid-template-columns: 1fr;
       }
 
-      .tools-inner {
-        align-items: flex-start;
-        flex-direction: column;
+      .flow div:not(:last-child)::after {
+        content: "↓";
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -22px;
+        transform: translateX(-50%);
       }
     }
 
-    @media print {
-      .tools,
-      .side,
-      button {
-        display: none;
-      }
-
-      body {
-        background: white;
-      }
-
+    @media (max-width: 560px) {
       .page {
-        width: 100%;
+        width: min(100% - 22px, var(--max));
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .lead-card,
+      .finding-card,
+      .source-note,
+      .ending {
+        padding: 18px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .quote {
+        padding: 20px;
       }
     }
   </style>
@@ -535,331 +565,244 @@
 <body>
   <header class="hero">
     <div class="page">
-      <div class="kicker">News Insight · 2026.08.01</div>
-      <h1>AI는 이제 성능 경쟁을 지나 운영의 시대에 들어섰다</h1>
-      <p class="dek">보안 사고, 모델 비용 압박, 1인 고매출 기업, 피지컬 AI가 한 주의 기술 뉴스 안에서 같은 방향을 가리킨다. 다음 경쟁력은 “가장 큰 모델”이 아니라 “가장 잘 운영되는 AI 시스템”이다.</p>
+      <div class="kicker">Research Report · AI Security · Solo Operator · Physical AI</div>
+      <h1>AI는 이제 ‘성능 경쟁’에서 ‘운영 능력’의 시대로 들어섰다</h1>
+      <p class="subtitle">2026년 8월 첫째 주 기술 뉴스는 한 방향을 가리킨다. 더 큰 모델보다 중요한 것은 보안, 비용 라우팅, 자동화 조직 설계, 그리고 물리 세계와 연결되는 실행력이다.</p>
 
-      <div class="meta-bar">
-        <span class="pill">출처: Singularity Hub</span>
-        <span class="pill">분석일: 2026-08-03</span>
-        <span class="pill">키워드: AI Security · Solo-operator · Physical-AI</span>
+      <div class="meta-grid" aria-label="article metadata">
+        <div><strong>Source</strong><span>Singularity Hub</span></div>
+        <div><strong>Published</strong><span>2026-08-01</span></div>
+        <div><strong>Analyzed</strong><span>2026-08-03</span></div>
+        <div><strong>Frame</strong><span>뉴스 인사이트 리포트</span></div>
       </div>
 
-      <div class="hero-grid">
-        <figure class="hero-image">
-          <img src="assets/this-week-s-awesome-tech-stories-from-around-the-web-through-august-1-infograph-1785752458743.png" alt="2026년 8월 첫째 주 주요 기술 뉴스 인포그래픽">
-          <figcaption>주간 기술 뉴스 흐름: AI 보안, 비용 최적화, 1인 기업, 피지컬 AI, 레트로핏 자동화.</figcaption>
-        </figure>
-
-        <aside class="abstract" id="abstract">
-          <h2>Abstract</h2>
-          <p>OpenAI 보안 실수와 Anthropic 모델이 드러낸 대규모 취약점은 AI 인프라의 기본기를 다시 묻고 있다. 동시에 Stripe 데이터가 보여주는 1인 고매출 기업의 증가, 기업들의 Multi-LLM 라우팅 전환, 뇌파와 물리 데이터 기반 AI 실험은 AI가 데모 단계를 지나 운영·비용·현장 적용의 단계로 이동했음을 보여준다.</p>
-        </aside>
-      </div>
+      <figure class="hero-image">
+        <img src="assets/this-week-s-awesome-tech-stories-from-around-the-web-through-august-1-infograph-1785752458743.png" alt="2026년 8월 첫째 주 기술 뉴스 인포그래픽">
+        <figcaption>이번 리포트는 Singularity Hub의 주간 기술 뉴스 묶음을 바탕으로 AI 보안, 솔로 오퍼레이터, 피지컬 AI의 흐름을 재구성했다.</figcaption>
+      </figure>
     </div>
   </header>
 
-  <nav class="tools" aria-label="문서 도구">
-    <div class="tools-inner">
-      <div class="toc">
-        <a href="#findings">핵심 발견</a>
-        <a href="#evidence">증거</a>
-        <a href="#framework">해석</a>
-        <a href="#implications">시사점</a>
-        <a href="#education">교육 활용</a>
-        <a href="#content">콘텐츠 기획</a>
-        <a href="#sources">출처</a>
+  <div class="page layout">
+    <aside class="toc" aria-label="table of contents">
+      <h2>Contents</h2>
+      <a href="#abstract">Abstract</a>
+      <a href="#findings">Key Findings</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#shift">Trend Shift</a>
+      <a href="#implications">Implications</a>
+      <a href="#education">Education Use</a>
+      <a href="#content">Content Ideas</a>
+      <a href="#sources">Source Notes</a>
+      <div class="toolbox">
+        <button type="button" id="copySummary">요약 복사</button>
+        <button type="button" id="copyOutline">목차 복사</button>
+        <div class="copy-status" id="copyStatus" aria-live="polite"></div>
       </div>
-      <div>
-        <button type="button" data-copy="summary">요약 복사</button>
-        <button type="button" data-copy="outline">목차 복사</button>
-      </div>
-    </div>
-  </nav>
+    </aside>
 
-  <div class="page">
     <main>
       <article>
-        <section id="findings">
-          <h2>핵심 발견: AI의 “소화기”가 시작됐다</h2>
-          <p class="lead">지난 몇 년간 AI 담론은 더 큰 모델, 더 높은 벤치마크, 더 화려한 데모에 집중했다. 하지만 2026년 8월 첫째 주의 기술 뉴스는 다른 질문을 던진다. 이 시스템은 안전한가? 감당 가능한 비용인가? 실제 조직과 물리 세계에서 반복 운용될 수 있는가?</p>
-
-          <div class="key-findings">
-            <div class="finding">
-              <strong>Finding 1 · 보안</strong>
-              <p>AI 에이전트가 더 많은 권한을 가질수록 자격 증명, 권한 관리, 패치 속도 같은 기본 보안 체계가 핵심 병목이 된다.</p>
-            </div>
-            <div class="finding">
-              <strong>Finding 2 · 비용</strong>
-              <p>기업들은 모든 작업에 고가 모델을 쓰는 관행에서 벗어나, 업무별로 중소형·오픈소스 모델을 조합하는 라우팅 전략으로 이동하고 있다.</p>
-            </div>
-            <div class="finding">
-              <strong>Finding 3 · 조직</strong>
-              <p>AI 자동화 파이프라인은 1인 기업의 매출 한계를 밀어 올리며, 고용 기반 성장 공식 자체를 흔들고 있다.</p>
-            </div>
-            <div class="finding">
-              <strong>Finding 4 · 물리 세계</strong>
-              <p>뇌파, 현장 센서, 구형 장비 개조, 배터리 수명 연장 같은 피지컬 AI 흐름은 디지털 AI가 실물 경제로 확장되는 경로를 보여준다.</p>
+        <section id="abstract">
+          <p class="section-label">Abstract</p>
+          <h2>AI 산업의 진짜 시험은 이제부터다</h2>
+          <div class="lead-card">
+            <p class="abstract">OpenAI의 보안 실수, Anthropic 모델이 찾아낸 대규모 소프트웨어 취약점, Stripe 데이터가 보여준 1인 고매출 기업 증가, 그리고 기업들의 Multi-LLM 라우팅 전환은 같은 메시지를 공유한다. AI는 더 이상 데모 성능만으로 평가되지 않는다. 실제 운영 환경에서 안전하게 굴러가고, 비용을 통제하며, 소수 인원이 큰 결과를 내도록 설계하는 능력이 핵심 경쟁력이 되고 있다.</p>
+            <div class="share-frame" aria-label="share framing">
+              <span class="pill">한 줄 요약: AI의 다음 국면은 운영 최적화다</span>
+              <span class="pill">읽을 대상: 창업자, 개발자, 교육자, 콘텐츠 기획자</span>
+              <span class="pill">핵심 키워드: 보안 · 라우팅 · 1인 기업 · 피지컬 AI</span>
             </div>
           </div>
-
-          <blockquote class="pullquote">AI 혁신의 다음 장은 “무엇을 할 수 있나”보다 “얼마나 안전하고 싸게, 오래 반복할 수 있나”에 달려 있다.</blockquote>
         </section>
+
+        <section id="findings">
+          <p class="section-label">Key Findings</p>
+          <h2>이번 주 뉴스에서 읽히는 네 가지 결론</h2>
+          <div class="findings">
+            <div class="finding-card">
+              <b>1. AI 보안은 선택 과목이 아니라 운영 기본기다</b>
+              <p>에이전트가 더 많은 권한을 갖는 순간, 자격 증명 관리와 접근 통제의 작은 실수가 조직 전체의 리스크가 된다.</p>
+            </div>
+            <div class="finding-card">
+              <b>2. ‘가장 비싼 모델 하나’ 전략은 흔들리고 있다</b>
+              <p>기업들은 업무 난도에 따라 중소형, 오픈소스, 고성능 모델을 나눠 쓰는 라우팅 체계로 비용을 줄이려 한다.</p>
+            </div>
+            <div class="finding-card">
+              <b>3. 1인 기업의 상한선이 빠르게 올라가고 있다</b>
+              <p>AI 자동화와 결제·운영 플랫폼의 결합은 직원 없이도 백만 달러 단위 매출을 다루는 솔로 오퍼레이터를 늘리고 있다.</p>
+            </div>
+            <div class="finding-card">
+              <b>4. 다음 데이터 전장은 물리 세계다</b>
+              <p>뇌파, 현장 센서, 구형 장비 개조, 배터리 관리처럼 AI는 텍스트 화면 밖의 물리적 세계로 이동하고 있다.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="quote">“AI 거품이 꺼지는 것이 아니라, AI가 실제 산업 시스템 안에서 소화되는 과정이 시작됐다.”</div>
 
         <section id="evidence">
-          <h2>증거 섹션: 한 주의 뉴스가 가리킨 네 개의 신호</h2>
+          <p class="section-label">Evidence Sections</p>
+          <h2>뉴스 조각들이 만드는 하나의 패턴</h2>
+          <p>Singularity Hub가 묶은 이번 주 기술 뉴스는 표면적으로는 흩어진 이야기처럼 보인다. 보안 사고, 취약점 탐지, 1인 기업, 일자리 논쟁, 뇌파 기반 피지컬 AI, AI 금융, 데이터센터 냉각, 자율주행 트랙터까지 주제가 넓다. 그러나 산업적 의미는 분명하다. AI는 ‘가능성 증명’에서 ‘운영 체계 구축’으로 이동하고 있다.</p>
 
           <div class="evidence-grid">
-            <div class="card">
-              <span class="badge">01 · AI Security</span>
-              <h3>보안은 더 이상 부가 기능이 아니다</h3>
-              <p>OpenAI 관련 보안 실수와 Anthropic 모델이 발견한 대규모 취약점 사례는 AI 시스템이 새로운 공격면을 만든다는 사실을 보여준다. 문제는 모델 성능이 아니라 운영 권한, 자격 증명, 패치 처리량이다.</p>
+            <div class="evidence">
+              <strong>AI Security</strong>
+              <span>OpenAI 보안 이슈와 Anthropic 모델의 취약점 탐지는 에이전트 시대의 보안 부채를 드러낸다. 자동화 권한이 늘수록 기본 보안 설정의 중요성은 커진다.</span>
             </div>
+            <div class="evidence">
+              <strong>Solo-operator</strong>
+              <span>Stripe 데이터는 연 매출 100만 달러 이상 1인 기업의 증가를 보여준다. AI는 인력 채용 이전에 운영 레버리지를 제공하는 도구가 되고 있다.</span>
+            </div>
+            <div class="evidence">
+              <strong>Physical-AI</strong>
+              <span>EEG, 농기계 레트로핏, 배터리 수명 연장, 우주 데이터센터 냉각은 AI가 디지털 인터페이스를 넘어 물리 인프라로 확장되는 장면이다.</span>
+            </div>
+          </div>
 
-            <div class="card">
-              <span class="badge">02 · Solo-operator</span>
-              <h3>1인 기업의 상한선이 올라간다</h3>
-              <p>Stripe 데이터에 따르면 연 매출 100만 달러 이상 1인 기업이 2023년부터 2025년 사이 두 배 증가했고, 1000만 달러 이상 기업은 세 배 가까이 늘었다. AI는 작은 조직의 처리량을 바꾸고 있다.</p>
-            </div>
-
-            <div class="card">
-              <span class="badge">03 · Multi-LLM</span>
-              <h3>비싼 모델 하나로는 경제성이 맞지 않는다</h3>
-              <p>기업들은 고성능 모델을 모든 작업에 투입하는 대신, 단순 작업에는 저렴한 모델을, 복잡한 추론에는 고성능 모델을 배치하는 라우팅 구조를 검토하고 있다.</p>
-            </div>
-
-            <div class="card">
-              <span class="badge">04 · Physical-AI</span>
-              <h3>데이터는 화면 밖에서 온다</h3>
-              <p>Zander Labs의 EEG 기반 인간 상태 데이터, 구형 트랙터의 자율주행 개조, EV 배터리 수명 연장 연구는 AI가 물리 데이터와 결합하는 방향을 보여준다.</p>
-            </div>
-
-            <div class="card">
-              <span class="badge">05 · Infrastructure</span>
-              <h3>데이터센터와 전력은 금융 이슈가 됐다</h3>
-              <p>칩, 데이터센터, 전력, 냉각 비용이 폭증하면서 AI 인프라는 기술 문제가 아니라 자본 조달과 에너지 전략의 문제로 확장되고 있다.</p>
-            </div>
-
-            <div class="card">
-              <span class="badge">06 · Labor</span>
-              <h3>일자리 대체는 단선적이지 않다</h3>
-              <p>AI가 모든 일자리를 곧바로 대체한다는 전망보다, 인간 노동과 AI 자동화가 얽히며 역할과 생산성의 경계가 재편되는 흐름이 더 현실적이다.</p>
-            </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>흐름</th>
+                  <th>뉴스 신호</th>
+                  <th>의미</th>
+                  <th>실무 질문</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>보안 현실화</td>
+                  <td>OpenAI 보안 실수, 대규모 취약점 발견</td>
+                  <td>AI 에이전트 운영에는 권한·비밀키·감사 체계가 필수</td>
+                  <td>우리 시스템의 API 키와 에이전트 권한은 최소 권한 원칙을 따르는가?</td>
+                </tr>
+                <tr>
+                  <td>비용 최적화</td>
+                  <td>기업들의 고가 모델 지출 조정과 라우팅 전환</td>
+                  <td>모든 작업에 최고가 모델을 쓰는 방식은 지속 가능하지 않음</td>
+                  <td>단순 작업과 고난도 추론 작업을 분리해 모델을 배정하고 있는가?</td>
+                </tr>
+                <tr>
+                  <td>조직 재편</td>
+                  <td>백만 달러 매출 1인 기업 증가</td>
+                  <td>AI 자동화가 소규모 조직의 생산성 상한을 높임</td>
+                  <td>반복 운영 업무 중 에이전트에 위임 가능한 것은 무엇인가?</td>
+                </tr>
+                <tr>
+                  <td>물리 세계 확장</td>
+                  <td>EEG, 자율주행 트랙터, 배터리, 냉각 인프라</td>
+                  <td>AI의 핵심 데이터가 텍스트에서 센서·현장 데이터로 확장</td>
+                  <td>우리 산업의 물리 데이터는 어떤 방식으로 수집·학습될 수 있는가?</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
-        <section id="framework">
-          <h2>해석 프레임: 스포츠카에서 운송 시스템으로</h2>
-          <p>고성능 스포츠카를 처음 샀을 때는 빠르게 달리는 능력 자체가 감탄을 만든다. 하지만 매일 장을 보고, 출퇴근하고, 장거리 운전을 하려면 이야기가 달라진다. 연비, 정비성, 보험료, 주차 공간, 안전 장치가 더 중요해진다.</p>
-          <p>AI도 같은 변곡점에 있다. 가장 강력한 모델을 보유하는 것만으로는 충분하지 않다. 어떤 업무에 어떤 모델을 쓰는지, 권한은 어디까지 부여하는지, 사고가 났을 때 어떻게 차단하는지, 비용은 어떻게 예측하는지가 경쟁력이 된다.</p>
+        <section id="shift">
+          <p class="section-label">Trend Shift</p>
+          <h2>‘큰 모델을 쓰는 회사’보다 ‘잘 배치하는 회사’가 유리해진다</h2>
+          <p>초기 생성형 AI 도입은 대체로 단순했다. 가장 성능이 좋은 모델을 고르고, 가능한 많은 업무에 붙이고, 생산성 향상을 기대했다. 하지만 운영 단계로 들어서면 질문이 달라진다. 이 작업에 정말 최고가 모델이 필요한가? 이 에이전트가 접근하는 비밀키는 안전한가? 장애가 났을 때 누가 책임지는가? 사람이 빠진 워크플로우에서 검증 지점은 어디인가?</p>
+          <p>Multi-LLM 라우팅은 이 변화의 상징이다. 단순 요약, 분류, 초안 작성은 저렴하고 빠른 모델이 맡고, 복잡한 추론이나 민감한 판단은 고성능 모델과 사람의 검토를 연결한다. 핵심은 모델 이름이 아니라 배치 논리다.</p>
 
-          <div class="diagram" aria-label="AI 운영 전환 다이어그램">
+          <div class="diagram" role="img" aria-label="AI 운영 전환 다이어그램">
             <div class="flow">
-              <div>
-                <strong>성능 경쟁</strong>
-                <span>더 큰 모델, 더 높은 벤치마크, 데모 중심 도입</span>
-              </div>
-              <div>
-                <strong>운영 충격</strong>
-                <span>보안 사고, API 비용, 취약점 패치 부담 증가</span>
-              </div>
-              <div>
-                <strong>시스템 설계</strong>
-                <span>Multi-LLM 라우팅, 권한 관리, 워크로드 분류</span>
-              </div>
-              <div>
-                <strong>현장 확장</strong>
-                <span>1인 기업, 물리 데이터, 로봇·장비 자동화</span>
-              </div>
-            </div>
-          </div>
-
-          <h3>핵심 키워드 3가지</h3>
-          <div class="keyword-grid">
-            <div class="card">
-              <span class="badge">AI Security</span>
-              <p>AI 에이전트와 인프라 구동 시 발생하는 자격 증명 유출, 권한 남용, 시스템 취약점을 탐지하고 방어하는 체계.</p>
-            </div>
-            <div class="card">
-              <span class="badge">Solo-operator</span>
-              <p>AI 자동화 도구와 외부 플랫폼을 결합해 고용 인원 없이 높은 매출을 올리는 1인 사업자.</p>
-            </div>
-            <div class="card">
-              <span class="badge">Physical-AI</span>
-              <p>텍스트와 이미지를 넘어 뇌파, 생체 신호, 현장 실측 데이터를 이용해 로봇과 장비를 제어하는 AI.</p>
+              <div>성능 중심 도입</div>
+              <div>비용·보안 압박</div>
+              <div>워크로드별 라우팅</div>
+              <div>소규모 고효율 운영</div>
             </div>
           </div>
         </section>
 
         <section id="implications">
-          <h2>시사점: 개발자와 사업자는 무엇을 해야 하나</h2>
-          <p class="lead">AI 도입의 승부처는 도구를 “쓰는 것”에서 도구를 “운영하는 것”으로 이동했다. 지금 필요한 것은 더 많은 실험이 아니라, 안전하고 비용 효율적인 반복 체계다.</p>
-
-          <table class="matrix">
-            <thead>
-              <tr>
-                <th>기간</th>
-                <th>실행 과제</th>
-                <th>기대 효과</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>즉시</td>
-                <td>운영 중인 AI 에이전트의 API 키, 환경 변수, 외부 권한, 로그 접근 범위를 점검한다.</td>
-                <td>작은 설정 실수가 전체 시스템 리스크로 번지는 것을 막는다.</td>
-              </tr>
-              <tr>
-                <td>1주~1개월</td>
-                <td>자주 쓰는 프롬프트와 업무를 분류하고, 단순 작업에는 중소형 모델을 배치하는 라우팅 테스트를 진행한다.</td>
-                <td>API 비용을 낮추고 응답 속도와 장애 대응력을 개선한다.</td>
-              </tr>
-              <tr>
-                <td>3~6개월</td>
-                <td>기획, 제작, 마케팅, 고객 응대, 결제 처리를 모듈형 에이전트 워크플로우로 연결한다.</td>
-                <td>소수 인원 또는 1인 체제로도 매출 확장과 운영 지속성을 확보한다.</td>
-              </tr>
-              <tr>
-                <td>장기</td>
-                <td>뇌파, 센서, 장비 로그, 현장 데이터 등 물리 데이터 기반 AI 적용 가능성을 모니터링한다.</td>
-                <td>디지털 자동화를 넘어 실물 경제 영역의 자동화 기회를 선점한다.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="application-grid">
-            <div class="card">
-              <span class="badge">보안 체크</span>
-              <p>에이전트별 최소 권한 원칙, 키 회전 주기, 민감 데이터 접근 제한, 사고 시 즉시 차단 절차를 문서화한다.</p>
-            </div>
-            <div class="card">
-              <span class="badge">비용 체크</span>
-              <p>고성능 모델이 꼭 필요한 작업과 그렇지 않은 작업을 나누고, 월별 모델 비용 상한선을 설정한다.</p>
-            </div>
-            <div class="card">
-              <span class="badge">사업 체크</span>
-              <p>1인 또는 소규모 팀이 감당하기 어려운 반복 업무를 찾아 자동화 후보로 전환한다.</p>
-            </div>
-          </div>
+          <p class="section-label">Implications</p>
+          <h2>사업자와 개발자가 당장 점검해야 할 것</h2>
+          <ul class="application-list">
+            <li><strong>즉시 실행:</strong> 현재 운영 중인 AI 에이전트, 자동화 스크립트, 외부 API 키의 권한 범위를 점검한다. 특히 환경 변수, 토큰 저장 위치, 로그 노출 여부를 확인해야 한다.</li>
+            <li><strong>1주일-1개월:</strong> 반복 텍스트 업무, CS 응대, 마케팅 문구 생성, 분류 작업을 따로 분리하고 저비용 모델로 처리 가능한지 테스트한다.</li>
+            <li><strong>3-6개월:</strong> 보안 감사, 모델 라우팅, 사람 검토, 실패 복구를 포함한 에이전트 운영 표준을 만든다. 1인 또는 소규모 팀이 매출과 운영을 감당할 수 있는 자동화 구조를 설계한다.</li>
+          </ul>
         </section>
 
         <section id="education">
-          <h2>교육 활용: 미래 직업과 AI 보안을 함께 가르치기</h2>
-          <p>이 주제는 정보, 진로와 직업, 디지털 소양 수업과 자연스럽게 연결된다. 학생들은 AI를 단순한 편리한 도구가 아니라 권한과 책임을 가진 시스템으로 이해할 수 있다.</p>
+          <p class="section-label">Education Use</p>
+          <h2>수업에서는 ‘AI를 잘 쓰는 법’보다 ‘AI를 책임 있게 운영하는 법’을 다뤄야 한다</h2>
+          <p>이번 주제는 정보, 진로와 직업, 디지털 소양 수업에 잘 연결된다. 학생들에게 AI를 단순한 답변 생성기로 소개하는 데서 멈추지 않고, 권한 위임과 보안, 비용 판단, 미래 직업 구조의 변화를 함께 다루는 것이 중요하다.</p>
 
-          <table class="matrix">
-            <thead>
-              <tr>
-                <th>수업 단계</th>
-                <th>활동</th>
-                <th>평가 관점</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>도입</td>
-                <td>1인 기업으로 높은 매출을 내는 솔로프레너 사례를 보고 미래 직업의 모습을 토론한다.</td>
-                <td>AI가 직업 구조에 미치는 영향을 구체적으로 설명하는가.</td>
-              </tr>
-              <tr>
-                <td>전개</td>
-                <td>학생들이 AI 보안 관제사가 되어 에이전트 권한 남용, 자격 증명 유출, 패치 지연 시나리오를 분석한다.</td>
-                <td>보안 위험 요소를 최소 2가지 이상 명확히 제시하는가.</td>
-              </tr>
-              <tr>
-                <td>정리</td>
-                <td>자신이 1인 기업가라면 AI 에이전트에게 위임할 업무 3가지를 정리하고 통제 기준을 작성한다.</td>
-                <td>위임의 이점과 위험을 균형 있게 성찰하는가.</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>수업 단계</th>
+                  <th>활동 아이디어</th>
+                  <th>평가 포인트</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>도입</td>
+                  <td>AI 에이전트를 활용한 1인 기업의 하루를 상상하고 업무 목록을 작성한다.</td>
+                  <td>AI가 대체하는 일과 사람이 책임져야 하는 일을 구분하는가?</td>
+                </tr>
+                <tr>
+                  <td>전개</td>
+                  <td>학생들이 ‘AI 보안 관제사’가 되어 자격 증명 유출 시나리오를 분석한다.</td>
+                  <td>보안 위험 요소를 구체적으로 식별하고 대응 원칙을 제시하는가?</td>
+                </tr>
+                <tr>
+                  <td>정리</td>
+                  <td>자신이 1인 기업가라면 AI에게 맡길 업무 3가지와 직접 검토할 업무 1가지를 정리한다.</td>
+                  <td>자동화와 책임의 균형을 성찰하는가?</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="content">
-          <h2>콘텐츠 기획: 대중에게 전달하기 좋은 두 가지 각도</h2>
-
-          <div class="content-ideas">
-            <div class="card">
-              <span class="badge">Idea 1</span>
-              <h3>AI 모델 비용 80% 줄이는 Multi-LLM 라우팅</h3>
-              <p>타깃은 AI 서비스를 개발하거나 운영 중인 스타트업 대표와 기획자다. 단일 고가 모델만 쓰는 방식의 한계를 보여주고, 업무별 모델 배치 전략을 실제 비용 절감 관점에서 설명한다.</p>
-              <ul>
-                <li>도입: API 비용 폭탄 사례</li>
-                <li>본문: 모델별 장단점과 라우팅 구조</li>
-                <li>마무리: 비용 최적화 체크리스트</li>
-              </ul>
+          <p class="section-label">Content Planning</p>
+          <h2>콘텐츠로 풀어낼 때의 좋은 각도</h2>
+          <details open>
+            <summary>아이디어 1: AI 모델 비용 80% 줄이는 Multi-LLM 라우팅</summary>
+            <div class="details-body">
+              <p><strong>타겟:</strong> AI 서비스를 운영하는 스타트업 대표, 개발자, 기획자.</p>
+              <p><strong>핵심 메시지:</strong> 모든 작업에 고가 모델을 쓰는 방식은 낭비다. 업무 성격에 따라 모델을 나눠 쓰면 비용과 속도를 동시에 개선할 수 있다.</p>
+              <p><strong>구성:</strong> API 비용 폭탄 사례 → 모델별 장단점 비교 → 자동 라우팅 구조 시연 → 실무 체크리스트.</p>
             </div>
-
-            <div class="card">
-              <span class="badge">Idea 2</span>
-              <h3>직원 0명으로 연 10억 달성?</h3>
-              <p>타깃은 프리랜서, 예비 창업가, 1인 크리에이터다. AI 에이전트를 직제처럼 배치해 기획, 제작, 마케팅, 고객 응대를 자동화하는 흐름을 해설한다.</p>
-              <ul>
-                <li>도입: Stripe 데이터 기반 트렌드</li>
-                <li>본문: 1인 자동화 파이프라인 분해</li>
-                <li>마무리: 바로 시작할 수 있는 3단계</li>
-              </ul>
-            </div>
-          </div>
+          </details>
 
           <details>
-            <summary>제작 메모 열기</summary>
-            <p>썸네일 문구는 “직원 0명, 연 매출 10억?”처럼 숫자와 대비를 활용한다. 추천 키워드는 #1인기업 #AISecurity #MultiLLM #비용절감 #솔로프레너다. 후속 콘텐츠로는 1인 기업 필수 AI 보안 세팅 가이드, 뇌파 데이터와 피지컬 AI 미래 전망이 적합하다.</p>
+            <summary>아이디어 2: 직원 0명으로 연 10억 달성하는 1인 AI 기업</summary>
+            <div class="details-body">
+              <p><strong>타겟:</strong> 프리랜서, 예비 창업가, 1인 크리에이터.</p>
+              <p><strong>핵심 메시지:</strong> AI 에이전트는 단순 도구가 아니라 기획, 제작, 마케팅, 고객응대를 담당하는 운영 레이어가 될 수 있다.</p>
+              <p><strong>구성:</strong> Stripe 데이터 트렌드 → 자동화 파이프라인 분해 → 보안과 검수 지점 → 따라 해볼 3단계.</p>
+            </div>
           </details>
         </section>
 
         <section id="sources">
-          <h2>Source Notes</h2>
-          <p>이 글은 Singularity Hub의 2026년 8월 1일 주간 기술 기사 묶음을 바탕으로 한국어 독자를 위한 뉴스 인사이트 리포트 형식으로 재구성했다.</p>
-
-          <table class="matrix">
-            <thead>
-              <tr>
-                <th>항목</th>
-                <th>내용</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>원문</td>
-                <td><a href="https://singularityhub.com/2026/08/01/this-weeks-awesome-tech-stories-from-around-the-web-through-august-1-2/">This Week’s Awesome Tech Stories From Around the Web Through August 1</a></td>
-              </tr>
-              <tr>
-                <td>출처</td>
-                <td>Singularity Hub · SingularityHub Staff</td>
-              </tr>
-              <tr>
-                <td>발행일</td>
-                <td>2026-08-01</td>
-              </tr>
-              <tr>
-                <td>분석일</td>
-                <td>2026-08-03</td>
-              </tr>
-              <tr>
-                <td>관련 기사 축</td>
-                <td>OpenAI 보안, Anthropic 취약점 탐지, Stripe 1인 기업 데이터, AI 일자리 논쟁, EEG 기반 피지컬 AI, AI 인프라 금융, 오픈소스 모델 라우팅, 자율주행 트랙터, 우주 데이터센터 냉각</td>
-              </tr>
-            </tbody>
-          </table>
+          <p class="section-label">Source Notes</p>
+          <h2>출처와 해석 범위</h2>
+          <div class="source-note">
+            <p>이 글은 Singularity Hub의 2026년 8월 1일 주간 기술 뉴스 모음과 제공된 한국어 분석 노트를 바탕으로 작성한 편집형 리포트다. 원문 묶음은 여러 매체의 기사를 연결하고 있으며, 본문은 그 기사들의 공통 흐름을 ‘AI 운영 능력’이라는 관점으로 재구성했다.</p>
+            <ul>
+              <li>원문: <a href="https://singularityhub.com/2026/08/01/this-weeks-awesome-tech-stories-from-around-the-web-through-august-1-2/">Singularity Hub, This Week’s Awesome Tech Stories From Around the Web Through August 1</a></li>
+              <li>주요 참조 주제: OpenAI 보안 이슈, Anthropic 취약점 탐지, Stripe 기반 1인 기업 증가, Multi-LLM 비용 라우팅, EEG 기반 Physical AI, 레트로핏 자동화, AI 인프라 금융과 냉각 문제.</li>
+              <li>해석상 주의: 개별 기사 수치와 사례는 원문 및 연결 기사 맥락에 의존한다. 본 리포트의 초점은 수치 검증보다 여러 신호가 가리키는 산업적 방향을 읽는 데 있다.</li>
+            </ul>
+          </div>
         </section>
 
-        <section class="ending">
-          <h2>읽고 나서 남는 질문</h2>
-          <p>AI는 더 이상 “도입하면 좋은 기술”이 아니다. 권한을 주면 사고가 날 수 있고, 무작정 쓰면 비용이 터지며, 잘 설계하면 혼자서도 작은 회사 이상의 산출을 낼 수 있는 운영 시스템이다.</p>
-          <p>따라서 다음 질문은 단순하다. 우리는 AI를 얼마나 많이 쓰고 있는가가 아니라, 얼마나 안전하고 경제적으로 반복 운용할 수 있는 구조를 만들고 있는가?</p>
+        <section class="ending" aria-label="reader friendly ending">
+          <h2>결론: AI의 다음 승부처는 ‘운영 문해력’이다</h2>
+          <p>AI를 잘 쓰는 사람과 조직은 앞으로 더 많아질 것이다. 차이는 그다음에 생긴다. 누가 권한을 안전하게 관리하는가. 누가 모델 비용을 업무별로 통제하는가. 누가 혼자 또는 작은 팀으로도 반복 운영을 감당할 구조를 만드는가. 누가 텍스트 밖의 물리 데이터를 이해하고 제품과 현장에 연결하는가.</p>
+          <p>2026년의 AI 리더십은 더 화려한 데모가 아니라 더 단단한 운영 설계에서 나온다.</p>
         </section>
       </article>
-
-      <aside class="side" aria-label="문서 요약">
-        <h3>Reader Takeaways</h3>
-        <ol>
-          <li>AI 보안은 모델 성능만큼 중요한 운영 조건이다.</li>
-          <li>Multi-LLM 라우팅은 비용 최적화의 핵심 전략이 된다.</li>
-          <li>1인 기업은 AI 자동화로 새로운 성장 단위를 만든다.</li>
-          <li>피지컬 AI는 다음 데이터 원천을 물리 세계에서 찾는다.</li>
-        </ol>
-      </aside>
     <section class="marktl-reader-feedback" aria-label="Reader feedback">
 <style>
 .marktl-reader-feedback { margin: 40px auto 0; padding: 0; }
@@ -888,34 +831,31 @@
 </main>
   </div>
 
-  <div class="toast" role="status" aria-live="polite">복사되었습니다.</div>
-
   <script>
-    const copyMap = {
-      summary: "AI는 성능 경쟁을 지나 운영의 시대로 이동하고 있다. 핵심 신호는 AI 보안 리스크, Multi-LLM 비용 최적화, 1인 고매출 기업의 부상, 뇌파와 물리 데이터 기반 피지컬 AI다. 다음 경쟁력은 가장 큰 모델이 아니라 안전하고 경제적으로 반복 운용되는 AI 시스템이다.",
-      outline: "1. 핵심 발견: AI의 소화기 시작\n2. 증거: 보안, 비용, 1인 기업, 피지컬 AI\n3. 해석: 스포츠카에서 운송 시스템으로\n4. 시사점: 보안 점검, 모델 라우팅, 소규모 자동화\n5. 교육 활용\n6. 콘텐츠 기획\n7. Source Notes"
-    };
+    const summaryText = "AI는 성능 경쟁을 넘어 운영 능력의 시대로 이동하고 있다. 핵심은 AI 보안, Multi-LLM 비용 라우팅, 1인 고매출 기업, 피지컬 AI 확장이다. 사업자와 개발자는 API 키와 에이전트 권한을 점검하고, 업무별 모델 배치 전략을 세우며, 소규모 고효율 자동화 구조를 준비해야 한다.";
+    const outlineText = [
+      "1. Abstract: AI 산업의 진짜 시험은 운영 단계",
+      "2. Key Findings: 보안, 비용, 1인 기업, 피지컬 AI",
+      "3. Evidence: 뉴스 신호가 만드는 공통 패턴",
+      "4. Trend Shift: 큰 모델보다 잘 배치하는 능력",
+      "5. Implications: 사업자와 개발자의 실행 체크포인트",
+      "6. Education Use: AI 운영 책임을 가르치는 수업",
+      "7. Content Ideas: 라우팅과 1인 AI 기업 콘텐츠 기획",
+      "8. Source Notes: 출처와 해석 범위"
+    ].join("\\n");
 
-    const toast = document.querySelector(".toast");
-
-    document.querySelectorAll("[data-copy]").forEach((button) => {
-      button.addEventListener("click", async () => {
-        const key = button.getAttribute("data-copy");
-        const text = copyMap[key] || "";
-        try {
-          await navigator.clipboard.writeText(text);
-          toast.style.display = "block";
-          window.setTimeout(() => {
-            toast.style.display = "none";
-          }, 1600);
-        } catch (error) {
-          button.textContent = "복사 실패";
-          window.setTimeout(() => {
-            button.textContent = key === "summary" ? "요약 복사" : "목차 복사";
-          }, 1600);
-        }
+    function copyText(text, label) {
+      const status = document.getElementById("copyStatus");
+      navigator.clipboard.writeText(text).then(() => {
+        status.textContent = label + " 완료";
+        window.setTimeout(() => status.textContent = "", 1800);
+      }).catch(() => {
+        status.textContent = "복사 권한을 확인해 주세요";
       });
-    });
+    }
+
+    document.getElementById("copySummary").addEventListener("click", () => copyText(summaryText, "요약 복사"));
+    document.getElementById("copyOutline").addEventListener("click", () => copyText(outlineText, "목차 복사"));
   </script>
 </body>
 </html>
